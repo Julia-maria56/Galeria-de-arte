@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Gothic&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rosario:ital,wght@0,300..700;1,300..700&family=Special+Gothic+Condensed+One&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    list-style: none;
+    font-family: "Poppins";
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    width:100vw;
+    background-image: url('images/img-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;  
+    height:70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+header ul{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li{
+    padding:30px;
+    color:#ffffff ;
+    font-size: 30px;
+}
+
+header ul li h2{
+    font-size: 31px;
+}
+
+header ul li h3{
+    font-size: 21px;
+}
+
+header ul li input{
+    width:20vw;
+    height: 50px;
+    border-radius: 9px;
+    padding-left:10px;
+    background: #d3d1d190 ;
+    border:3px solid rgb(37, 37, 37);
+    color:black;
+    font-size:17px;
+}
+
+header ul li input::placeholder{
+    color:black;
+}
+
+header ul li button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size:15px;
+    background-color:#fff0f0;
+    font-weight: 500;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+header ul li button:hover{
+    background-color:#ffffff;
+    scale: 1.05;
+}
+
+main{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff0f0;
+    
+}
+
+.galeria{
+    width:80vw;
+    padding: 15px;
+    margin-bottom: 100px;
+}
+
+.titulo h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.titulo div{
+    width:100%;
+    height:1.9px;
+    background-color: black;
+    margin-top:3px;
+}
+
+.obras_de_arte{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top: 20px;
+}
+
+.obra{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    position: relative;
+}
+
+.obra.oculto{
+    display: none;
+}
+
+.obra img{
+    width: 50%;
+    height:350px;
+}
+
+.obra_info{
+    width:40%;
+       margin-top: 30px;
+}
+
+.obra_info h5{
+    font-size: 23px;
+}
+
+.obra_info h6{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.obra_info p{
+    margin-top:40px;
+    font-weight: 400;
+    font-size: 14px;
+    padding-right: 30px;
+}
+
+.obra button{
+    position: absolute;
+    bottom:0;
+    right:0;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size:15px;
+    background-color:#fdfdfd;
+    font-weight: 500;
+    transition-duration: 200ms;
+    cursor: pointer;
+    border: 1px solid #00000080;
+}
+
+.obra button:hover{
+    scale:1.05;
+}
+
+.blur{
+    width:100vw;
+    height: 100vh;
+    background-color: #00000080;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    opacity:0;
+    visibility: hidden;
+}
+
+.blur.mostrar{
+    opacity:1;
+    visibility: visible;
+}
+
+.form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* maior que o .blur */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    padding:40px;
+    visibility: hidden;
+    opacity:0;
+    transition-duration: 200ms;
+}
+
+.form.mostrar{
+    visibility: visible;
+    opacity: 1;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    width:30vw;
+}
+
+form h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+form h3 i{
+    cursor: pointer;
+    font-size: 30px;
+}
+
+form input{
+    border:2px solid #00000080;
+    height:40px;
+    border-radius: 8px;
+    margin-bottom:16px;
+    margin-top:5px;
+    padding: 10px;
+}
+
+form button{
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size:15px;
+    background-color:#fdfdfd;
+    font-weight: 500;
+    transition-duration: 200ms;
+    cursor: pointer;
+    border: 1px solid #00000080;
+}
+
+form button:hover{
+    scale: 1.05;
+}

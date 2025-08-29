@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <title>Galeria</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>
+                <h2>Deseja montar<br> sua galeria?</h2>
+                <h3>Aperte no botão abaixo e se divirta!</h3>
+                <button onclick="abrirModal()">Criar galeria</button>
+            </li>
+            <li>
+                <input onkeyup="pesquisarTarefa()" "text" id="pesquisar_obra" placeholder="Procure o seu quadro...">
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="blur" onclick="fecharModal()"></section>
+        <section class="form">
+            <form onsubmit="novaObra()">
+                <h3>Registre uma obra <i class='bx  bx-x' onclick="fecharModal()"></i> </h3>
+
+                <label>Nome da obra:</label>
+                <input type="text" name="" id="titulo">
+                <label for="">Imagem (URL)</label>
+                <input type="text" name="" id="img">
+                <label for="">Informações:</label>
+                <input type="text" id="informacoes" placeholder="Nome do artista, data de lançamento...">
+                <label for="">Sobre a obra:</label>
+                <input type="text" id="sobre" placeholder="O que você sentiu com a obra, pensamentos...">
+                <button>Registrar obra</button>
+            </form>
+        </section>
+
+        <section class="galeria">
+
+            <div class="titulo">
+                <h4>Sua galeria</h4>
+                <div></div>
+            </div>
+
+            <div class="obras_de_arte">
+
+                <!-- <div class="obra">
+                    <img src="images/img-3.jpg" alt="">
+                    <div class="obra_info">
+                        <h5>Nome da obra</h5>
+                        <h6>Data de fabricação</h6>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius quibusdam iure delectus ex
+                            minus at ipsam est beatae dolorem in doloremque voluptas perspiciatis dolor neque rem, ullam
+                            impedit quod sit?</p>
+                    </div>
+                    <button>Remover obra</button>
+                </div> -->
+
+
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
